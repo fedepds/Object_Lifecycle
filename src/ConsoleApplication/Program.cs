@@ -19,9 +19,12 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            var t1 = new Train("Last Train To London");
+            var t2 = new Train("Last Train To London");
+            var t3 = new Train("Runaway Train");
+            var cuantostrain = ($"Hay {Train.getCount()} trenes");
+            Console.WriteLine($"En la expresión t1==t2: {t1==t2}. Esto es porque los objetos referenciados por ambas variables son diferentes, son objetos distintos, cada uno ocupando un espacio diferente en el heap de la memoria.");
+            Console.WriteLine($"En la expresión t2==t3: {t2==t3}. Esto es porque los objetos referenciados por ambas variables son diferentes.");
         }
     }
 }
